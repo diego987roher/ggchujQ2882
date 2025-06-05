@@ -78,10 +78,28 @@
             padding: 40px 0;
         }
         
+        .title-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(108, 92, 231, 0.5));
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
         h1 {
             font-size: 3.5rem;
             font-weight: 700;
-            margin-bottom: 20px;
             background: linear-gradient(90deg, var(--primary), var(--primary-light));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -191,6 +209,11 @@
         }
         
         @media (max-width: 768px) {
+            .title-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
             h1 {
                 font-size: 2.5rem;
             }
@@ -224,7 +247,10 @@
         </nav>
         
         <div class="hero">
-            <h1>Fluxus Back, Better Than Ever</h1>
+            <div class="title-container">
+                <img src="https://images.icon-icons.com/3913/PNG/512/fluxus_logo_icon_248527.png" alt="Fluxus Logo" class="logo">
+                <h1>Fluxus Back, Better Than Ever</h1>
+            </div>
             <p class="subtitle">A powerful mobile Luau scripting engine, complete with a text editor and built-in script database.</p>
             <a href="#" class="download-btn">
                 Download
